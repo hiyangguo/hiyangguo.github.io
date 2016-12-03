@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: hiyangguo的blog
+title: Godfery的博客
 subtitle:
-description: Godfery的blog
+description: Godfery的博客
 avatar: /uploads/head.jpg
 author: hiyangguo(Godfery)
 language: zh-Hans
@@ -72,3 +72,9 @@ deploy:
   type: git
   repo: git@github.com:hiyangguo/hiyangguo.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

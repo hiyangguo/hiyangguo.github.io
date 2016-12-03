@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2016
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
@@ -32,7 +32,7 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
+  categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
@@ -129,6 +129,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 #social:
   #LinkLabel: Link
+social:
+  GitHub: https://github.com/hiyangguo
+  Segmentfault: https://segmentfault.com/u/hiyangguo
 
 
 # Social Links Icons
@@ -141,8 +144,8 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
   Weibo: weibo
+  Segmentfault: coffee
 
 
 # Sidebar Avatar
@@ -303,9 +306,9 @@ mathjax:
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  admin_enable: true
+  user_id: 1918445
+  admin_nickname: 保卫萝卜的🐻
 
 
 # Facebook SDK Support.
@@ -457,3 +460,8 @@ images: images
 
 # Theme version
 version: 5.1.0
+
+# 打赏
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /path/to/wechat-reward-image.png
+alipay: /path/to/alipay-reward-image.png
