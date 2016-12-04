@@ -1,8 +1,4 @@
 language: node_js
-env:
-  global:
-    - GH_REF: github.com/hiyangguo/hiyangguo.github.io
-    - secure: "Rke2BVwI9BGKWN8j61Rj84msuSE2gNtdwLZ9zTq4f/ZKS/295xEORRwox+bNPwshfT3U7y+OcnNN21EITdaeGEZdVN62yAPwQmfcawkJXY5/VOAxQema2p3V4JdngK+twNsKDwRFgIB0jSnenCqFxCEAE3bcxXfWhf/ZPBncFf5ZW5bbpXlWAF9OU00v2FzSZtWN4BHBm266tVyYsAkQQYfrNas++dPiF5AZP+X7TEUZ3S43cr8oSgeDuYCcHaE7gW12RNBCXTTelaa9UTOyhad0VkVkSjF0AQG+zpkNTozr+QN5/eQ7Ri6cjIa1orBlaGyKrK2I4P2w3Qi2AR2+VERguK4clMUcX0XMbAnNlMLrtngdqmTZmaFonUAGp5HMSFx7dFXw/c/p7Wxyq/Ehyuc6HyKXDex4ee6ILpqT1ibC6AiG9wyA9evbmPQuGkGblP5kj38Jo12SkZ/x5XHaKw7al2GVGACrti5GG6asizcKy+gCvMA6Wf7HYjtGdIdZphaDFyjHpJCFapl4B45vAVYDGStH8pr/HqWWaaJT6IVLBubuCVqN3Xh+ij8ZSN6tdnBDcVD25aOLKjvghiI8JW4RU0E8FFBJHUoB3BwcBnm5MlBg51jxSqboQE6LtbnR0C1QZI9vncY9frvpBnPN2w2Uz1Yd0RE+tdLRLdJgLxc="
 node_js:
   - "6.1"
 install:
