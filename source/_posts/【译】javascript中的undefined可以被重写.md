@@ -30,7 +30,7 @@ undefined = "test"
  
 在现代浏览器中，`undefined`的值将不能被重写
 
-#我们需要支持ie8或者更古老的浏览器怎么办
+# 我们需要支持ie8或者更古老的浏览器怎么办
 通常`undefined`指令是安全的。在应用中并没有什么理由需要修改`undefined`的值。
 [Thomas的回答](http://stackoverflow.com/questions/3390396/how-to-check-for-undefined-in-javascript/3390635#3390635)使用具有说服力的推理，论证了这一点。
 
@@ -58,7 +58,7 @@ if (typeof name === "undefined") {
 ```
 注意第二个选择与前一个方案稍微有点差异。虽然`name`没有被声明，`typeof` 仍然会说他是 `undefined`。如果你直接使用 `name` 与 `undefined`or `void(0)`你会得到`ReferenceError`异常的错误.
 
-#但是不要直接使用void(0)
+# 但是不要直接使用void(0)
 在代码中避免使用`void(0)`或者` typeof x === "undefined"`，这些表达式不是自解释的，应该包装在`isUndefined function`函数中，像这样：
 ```javascript
 function isUndefined(value){
