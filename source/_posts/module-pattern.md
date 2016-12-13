@@ -1,5 +1,5 @@
 ---
-title: 全面解析Module模式.md
+title: 全面解析Module模式
 categories: 深入理解JavaScript
 tags:
   - JavaScript
@@ -16,7 +16,9 @@ Module模式是JavaScript编程中一个非常通用的模式，一般情况下�
 3.  只暴露可用public的方法，其它私有方法全部隐藏
  
 关于Module模式，最早是由YUI的成员Eric Miraglia在4年前提出了这个概念，我们将从一个简单的例子来解释一下基本的用法（如果你已经非常熟悉了，请忽略这一节）。
- 
+
+<!-- more -->
+
 # 基本用法
  
 先看一下最简单的一个实现，代码如下：
