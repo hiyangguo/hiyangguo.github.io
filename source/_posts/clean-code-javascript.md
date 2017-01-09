@@ -9,7 +9,7 @@ tags:
 ![](/uploads/14839402166220.jpg)
 ## 介绍
 [作者](https://github.com/ryanmcdermott)根据Robert C. Martin[*《代码整洁之道》*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)总结了适用于JavaScript的软件工程原则[《Clean Code JavaScript》](https://github.com/ryanmcdermott/clean-code-javascript)。
-本文是对其的翻译。翻译者:[alivebao](https://github.com/alivebao/clean-code-js)。
+本文是对其的翻译。原文地址:[alivebao](https://github.com/alivebao/clean-code-js)。
 
 <!-- more -->
 
