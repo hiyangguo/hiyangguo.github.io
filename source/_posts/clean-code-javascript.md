@@ -1,8 +1,9 @@
 ---
 title: Clean JavaScript:写出整洁的JavaScript代码
-categories: javascript
+categories: 规范
 tags:
   - javascript
+  - 规范
 ---
 
 ![](/uploads/14839402166220.jpg)
