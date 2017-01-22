@@ -1,6 +1,6 @@
 ---
 title: 跨页面(tab/window)通信的几种方法
-categories: Javascript
+categories: javascript
 tags:
   - Javascript
   - 页面通讯
