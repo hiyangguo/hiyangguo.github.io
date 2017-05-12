@@ -11,7 +11,8 @@ cache:
     - node_modules
 
 before_deploy:
-  - npm run build
+  - hexo g
+  - gulp cp
 
 deploy:
   provider: pages
