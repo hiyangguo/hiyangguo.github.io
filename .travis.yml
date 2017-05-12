@@ -9,16 +9,24 @@ install:
 cache:
   directories:
     - node_modules
+    - public
 
-before_deploy:
+script:
   - hexo g
-  - gulp cp
 
-deploy:
-  provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    local_dir: public
-    target_branch: master
-    on:
-      branch: dev
+after_script:
+  - gulp cp
+  - cd ./public
+  - git init
+  - git config user.name "Godfery"
+  - git config user.email "hiyangguo@qq.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+env:
+ global:
+   - GH_REF: github.com:hiyangguo/hiyangguo.github.io.git
+branches:
+  only:
+    - dev
+
