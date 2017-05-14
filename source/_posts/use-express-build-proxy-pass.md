@@ -47,12 +47,19 @@ const request = require('superagent');
 const app = express();
 //这里从环境变量读取配置，方便命令行启动
 const { HOST = 'http://10.0.1.10:8080', PORT = '3300' } = process.env;
+//转换body用于读取
+app.use(require('connect').bodyParser());
 //设置端口
 app.set('port', PORT);
 //反向代理（这里把需要进行反代的路径配置到这里即可）
 //如需要将/api/test 代理到 ${HOST}/api/test
 app.use('/api/test*', function (req, res) {
-    var sreq = request.get(HOST + req.originalUrl);
+    const method = req.method.toLowerCase();
+    const sreq = request[method](HOST + req.originalUrl);
+    if (method === 'post' || method === 'put') {
+        sreq.set('Content-Type', 'application/json')
+            .send(req.body)
+    }
     sreq.pipe(res);
     sreq.on('end', function (error, res) {
         if (error) {
