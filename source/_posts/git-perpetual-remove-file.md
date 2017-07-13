@@ -66,3 +66,9 @@ git gc --aggressive --prune
 ```bash
 git filter-branch --prune-empty
 ```
+
+**注意**：这样操作会改写 `commit` 记录，所以如果已提交到服务端，请务必谨慎操作！如果确定没有问题可以使用下面的命令强制提交。
+```bash
+git push --force
+```
+如果当前为`master`分支或者被设为`proteced`则需要首先取消`proteced`。
