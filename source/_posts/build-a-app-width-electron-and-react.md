@@ -6,33 +6,32 @@ tags:
   - react
 ---
 
-这篇文章主要记录了，使用 Electron 构建的一个磁力链接搜索 APP 过程中，所遇到的关键步骤和遇到的问题。
-本次开发使用的技术栈有
-- Electron
-- react
-- mobx
-- react-router
-- create-react-app
+这篇文章主要记录了，使用 Electron 构建的一个 APP 过程的关键步骤和遇到的问题及解决方法。
 
 # 最终效果图
 ![最终效果图](/uploads/build-a-app-width-electron-and-react/electron-preview.gif)
+[查看源码][bt-radish-app]
+
+<!-- more -->
 
 # 起步
 首先使用 `create-react-app` 新建一个 react app。因为这玩意儿新建的时候会帮你初始化`npm`，相当刺激。
+其实主要是使用`create-react-app`的时候必须要指定一个名字。
+然后他就在当前目录下创建了一个同名的文件夹，所有东西都放在这个文件夹下面了。（可能我没找到如何在当前目录创建的方法，欢迎指正）
+
 ```bash
 npx create-react-app test-app
 ```
+
+
 > [npx 是什么][what-is-npx]
-安装好以后，我们需要按照 Electron 官方示例开始继续。
+
+
+安装好以后，我们再按照 Electron 官方示例继续。
 ``` bash
 npm install --save-dev electron
 ```
 然后。。。就卡住了，卡住了有木有？！是我们姿势不对么？这里什么也没写啊。什么鬼？
-那我们加个参数，看看到底是什么情况
-```bash
-npm install  --save-dev electron --verbose 
-```
-之后我们就能看到了，是下载 electron 的时候，下不下来。
 ```bash
 > electron@1.8.4 postinstall /Users/godfery/GitRepo/hiyangguo.github.io/node_modules/electron
 > node install.js
@@ -40,7 +39,11 @@ npm install  --save-dev electron --verbose
 
 ... and 1 more
 ```
-这里是卡在了下载 electron 的地方，所以我们需要使用国内的镜像。
+那我们加个参数，看看到底是什么情况
+```bash
+npm install  --save-dev electron --verbose 
+```
+之后我们就能看到了，是在下载 electron 的地方，下载不下来，龟速，所以我们需要就[使用国内的镜像][use-chinese-mirror]。
 在根目录新建一个 `.npmrc` 文件，内容如下:
 ```
 ## 这里推荐使用淘宝镜像，当然也可以使用其他镜像
@@ -141,7 +144,7 @@ npm run start-electron
 既然是用`react`开发，肯定是要用[React Developer Tools][react-developer-tools]的，这里就来说一下，如何在`electron`中使用拓展。(以 mac 为例)
 1. 打开 Chrome 浏览器，导航到 `chrome://extensions`，找到 React Developer Tools 插件的 ID：**fmkadmapgofadopljbjfkapdkoienihi**
 2. 进入 `~/Library/Application Support/Google/Chrome/Default/Extensions` 目录。在 Finder 中，点击 前往 > 前往文件夹。（或使用快捷键 `shift + command + G`）。粘贴即可。
-3. 进入 `fmkadmapgofadopljbjfkapdkoienihi` 文件夹，子目录`3.2.1_0`中的的文件拷贝项目根目录下`chrome-extensions`目录中，并重命名为`react-dev-tools`。
+3. 进入 `fmkadmapgofadopljbjfkapdkoienihi` 文件夹，子目录`3.2.1_0`（也可能是其他的，反正是个版本号）中的的文件拷贝项目根目录下`chrome-extensions`目录中，并重命名为`react-dev-tools`。
 4. 修改代码
 ```diff
 const { app, BrowserWindow } = require('electron')
@@ -442,16 +445,18 @@ npm install electron-builder --save-dev
   "devDependencies": {
     "electron": "^1.8.4",
     "electron-builder": "^20.8.1",
-+    "react": "^16.2.0",
++   "react": "^16.2.0",
     "react-app-rewire-less": "^2.1.1",
     "react-app-rewired": "^1.5.0",
-+    "react-dom": "^16.2.0",
-+    "react-scripts": "1.1.1"
++   "react-dom": "^16.2.0",
++   "react-scripts": "1.1.1"
   }
 }
 ```
 
 之后运行`npm run packager` 即可得到 `dmg` 安装文件。
+
+[起步demo 源代码](https://github.com/hiyangguo/electron-with-react)
 
 > 参考文章
 > [From React to an Electron app ready for production](https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3)
@@ -464,3 +469,4 @@ npm install electron-builder --save-dev
 [react-app-rewired]:https://github.com/timarney/react-app-rewired
 [bt-radish-app]:https://github.com/hiyangguo/bt-radish-app
 [electron-builder-home]:https://electron.build/
+[use-chinese-mirror]:https://electronjs.org/docs/tutorial/installation#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F%E5%92%8C%E7%BC%93%E5%AD%98
