@@ -8,7 +8,7 @@ tags:
 
 这篇文章主要记录了，使用 Electron 构建的一个 APP 过程的关键步骤和遇到的问题及解决方法。
 
-# 最终效果图
+# 最终成品效果图
 ![最终效果图](/uploads/build-a-app-width-electron-and-react/electron-preview.gif)
 [查看源码][bt-radish-app]
 
@@ -279,7 +279,7 @@ win = new BrowserWindow({
 })
 ```
 
-开发过程不再赘述，有兴趣可以直接[查看源码][bt-radish-app]。
+开发过程不再赘述，有兴趣可以直接[查看源码][bt-radish-app]。后续会单开一篇文章详细讲解开发过程以及如何更好的发挥 electron 的优势。
 
 # 打包
 ## 修改 electron 代码
