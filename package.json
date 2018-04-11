@@ -5,7 +5,7 @@
   "scripts": {
     "server": "hexo s",
     "build": "rm -rf public/static  && hexo g && gulp cp",
-    "deploy": "npm run build && hexo d"
+    "deploy": "npm run build && hexo d && rm -rf .deploy_git"
   },
   "hexo": {
     "version": "3.2.2"
