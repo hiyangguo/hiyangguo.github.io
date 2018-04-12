@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "前端技术博客, CSS, Javascript, 字体"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -198,11 +198,13 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: 推荐阅读
 #links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+links_layout: inline
+links:
+  前端导航网: http://jsdig.com/
+  印记中文: https://docschina.org/#linter
+  HYPERS F2E 博客: http://blog.hypers.io/
 
 
 # ---------------------------------------------------------------
@@ -245,7 +247,8 @@ post_wordcount:
 post_copyright:
   enable: true
   license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/cn/
+  license_img_src: https://i.creativecommons.org/l/by-nc-sa/3.0/cn/80x15.png
 
 
 
