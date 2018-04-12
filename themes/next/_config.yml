@@ -425,6 +425,11 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
+# Online contact
+daovoice: true
+daovoice_app_id: df813c64
+
+
 # Google Calendar
 # Share your recent schedule to others via calendar page
 #
