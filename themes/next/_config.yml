@@ -202,7 +202,8 @@ links_title: 推荐阅读
 #links_layout: block
 links_layout: inline
 links:
-  前端导航网: http://jsdig.com/
+  JSDig: http://jsdig.com/
+  腾讯前端导航: http://www.alloyteam.com/nav/
   印记中文: https://docschina.org/#linter
   HYPERS F2E 博客: http://blog.hypers.io/
 
