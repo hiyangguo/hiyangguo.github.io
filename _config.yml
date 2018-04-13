@@ -78,3 +78,17 @@ search:
   field: post
   format: html
   limit: 10000
+
+# Index Generator
+index_generator:
+  per_page: 5
+
+# Archive Generator
+archive_generator:
+  per_page: 15
+  yearly: true
+  monthly: true
+
+# Tag Generator
+#tag_generator:
+# per_page: 10
