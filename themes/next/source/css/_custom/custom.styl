@@ -1,4 +1,11 @@
 // Custom styles.
 body {
-  background :url("../images/bg.png");
+  background: url("../images/bg.png");
+}
+
+// hide daovoice in mobile
+.daodream-container {
+  +mobile() {
+    display: none;
+  }
 }

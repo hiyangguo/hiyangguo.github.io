@@ -427,8 +427,8 @@ busuanzi_count:
 baidu_push: false
 
 # Online contact
-#daovoice: true
-#daovoice_app_id: df813c64
+daovoice: true
+daovoice_app_id: df813c64
 
 
 # Google Calendar
