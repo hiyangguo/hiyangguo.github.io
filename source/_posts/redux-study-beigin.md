@@ -1,5 +1,6 @@
 ---
 title: Redux入门
+date: 2016-12-26 09:36:00
 categories: react学习
 tags:
   - javascript

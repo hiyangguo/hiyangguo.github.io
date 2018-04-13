@@ -1,5 +1,6 @@
 ---
 title: 【译】javascript中的undefined可以被重写
+date: 2016-12-4 10:24:00
 categories: 翻译
 tags:
   - JavaScript

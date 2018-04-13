@@ -1,6 +1,7 @@
 ---
 title: Clean JavaScript:写出整洁的JavaScript代码
 categories: 规范
+date: 2017-01-09 01:51:10
 tags:
   - javascript
   - 规范

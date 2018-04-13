@@ -1,5 +1,6 @@
 ---
 title: 跨页面(tab/window)通信的几种方法
+date: 2017-01-22 10:45:02
 categories: javascript
 tags:
   - Javascript

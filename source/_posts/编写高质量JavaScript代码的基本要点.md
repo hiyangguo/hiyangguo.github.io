@@ -1,5 +1,6 @@
 ---
 title: 编写高质量JavaScript代码的基本要点
+date: 2016-12-04 03:03:00
 categories: 深入理解JavaScript
 tags:
   - JavaScript

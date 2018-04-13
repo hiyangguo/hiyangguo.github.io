@@ -1,5 +1,6 @@
 ---
 title: 全面解析Module模式
+date: 2016-12-11 01:41:00
 categories: 深入理解JavaScript
 tags:
   - JavaScript

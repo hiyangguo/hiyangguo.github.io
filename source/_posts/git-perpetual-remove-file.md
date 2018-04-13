@@ -1,5 +1,6 @@
 ---
 title: git永久删除文件
+date: 2017-07-13 06:47:00
 categories: git
 tags:
   -  git操作
