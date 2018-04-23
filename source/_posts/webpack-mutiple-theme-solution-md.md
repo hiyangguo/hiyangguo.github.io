@@ -38,7 +38,7 @@ import './less/index.less';
 + import './less/themes/yellow.less';
 ```
 然后编译一下，你发现所有的样式都混在一起了。
-![混在一起的样式](/uploads/webpack-mutiple-theme-solution/ mix-css.png)
+![混在一起的样式](/uploads/webpack-mutiple-theme-solution/mix-css.png)
 参照文档，我们需要多次声明 `ExtractTextPlugin`，以达到把不同的主题输出到不同文件的目的。这里我使用的是, `loader` 的 `include` 和 `exclude`参数。在默认样式中将其他样式排除，然后每一个主题的样式,分别打包自己的样式。
 最终代码的改动如下：
 ```diff
