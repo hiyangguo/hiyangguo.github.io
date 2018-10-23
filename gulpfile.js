@@ -9,6 +9,7 @@ const htmlclean = require('gulp-htmlclean');
 
 // 复制静态资源
 gulp.task('cp', () => {
+  gulp.src(['CNAME']).pipe(gulp.dest('public'));
   gulp.src(['static/**/*']).pipe(gulp.dest('public/static'));
   gulp.src(['uploads/**/*']).pipe(gulp.dest('public/uploads'));
 });
