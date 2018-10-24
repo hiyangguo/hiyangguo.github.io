@@ -233,6 +233,7 @@
                 {% endif %}
                 <span title="{{ __('post.min2read') }}">
                   {{ min2read(post.content) }}
+                  {{ __('post.read_unit') }}
                 </span>
               {% endif %}
             </div>
