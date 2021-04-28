@@ -1,14 +1,15 @@
 language: node_js
 node_js:
-  - 9
+  - stable
 install:
   - npm install
 cache:
   directories:
     - node_modules
+    - public
 before_deploy:
   - hexo g
-  - gulp
+  - gulp build
 deploy:
   - provider: pages
     skip_cleanup: true
