@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - stable
+before_install:
+  - npm install hexo-cli -g
 install:
   - npm install
 cache:
@@ -18,3 +20,4 @@ deploy:
     target_branch: master
     on:
       branch: dev
+script: 'true'
