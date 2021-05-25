@@ -702,7 +702,7 @@ leancloud_visitors:
   app_id: 2jwVI58glS0nRFUd0v7YwmSE-gzGzoHsz
   app_key: BrxDua0t4Dci3dlvkby5JuJo
   # Required for apps from CN region
-  server_url: # <your server url>
+  server_url: https://2jwvi58g.lc-cn-n1-shared.com
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
