@@ -21,6 +21,18 @@ jobs:
       - run:
           name: build
           command: npm run build
+      - run:
+          name: 部署Github Pages
+          command: |
+            cd public
+            ls
+            git init
+            git config user.name "$GH_USER"
+            git config user.email "$GH_EMAIL"
+            git add .
+            git commit -m "update"
+            git push --force --quiet "https://$GH_TOKEN@$GH_REF" master
+            echo 'deploy success'
 workflows:
   version: 2
   build-deploy:
