@@ -22,7 +22,7 @@ jobs:
           name: build
           command: npm run build
       - run:
-          name: 部署Github Pages
+          name: deploy
           command: |
             cd public
             ls
