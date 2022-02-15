@@ -163,10 +163,11 @@ links_settings:
   layout: block
 
 links:
-  JSDig: https://fed.hiyangguo.com/
+  JSDig: https://wangchujiang.com/FED/
+  印记中文: https://docschina.org/
   腾讯前端导航: http://www.alloyteam.com/nav/
-  印记中文: https://docschina.org/#linter
-  HYPERS F2E 博客: http://blog.hypers.io/
+  被删的前端游乐场: https://godbasin.github.io/front-end-playground/
+
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
