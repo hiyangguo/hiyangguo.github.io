@@ -33,8 +33,10 @@ build/Release
 node_modules
 jspm_packages
 
+
 # Optional npm cache directory
 .npm
+!package-lock.json
 
 # Optional eslint cache
 .eslintcache

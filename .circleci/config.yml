@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  generate-page:
+    docker:
+      - image: node:14.16.1
+    steps:
+      - checkout
+      - run:
+          name: install hexo
+          command: npm install hexo-cli -g
+      - run:
+          name: npm install
+          command: npm ci
+      - run:
+          name: update submodule
+          command: |
+            echo "submodule init."
+            git submodule init
+            echo "submodule update."
+            git submodule update
+      - run:
+          name: build
+          command: npm run build
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - generate-page:
+          filters:
+            branches:
+              only: dev
