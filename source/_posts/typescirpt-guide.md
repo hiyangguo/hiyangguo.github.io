@@ -596,6 +596,52 @@ enum Enum {
 
 ### 类型运算和派生
 
+#### 字面量类型
+
+字符串字面量
+
+```typescript
+type Fruits = 'apple' | 'banana' | 'orange';
+```
+
+其他字面量类型
+
+```typescript
+// 其他字面量类型
+type OneToFive = 1 | 2 | 3 | 4 | 5;
+type Bools = true | false;
+```
+
+#### 模板字面量类型
+
+模板字面量类型建立在字符串文字类型之上，并且能够通过联合扩展成许多字符串。
+
+```typescript
+type EmailLocaleIDs = 'welcome_email' | 'email_heading';
+type FooterLocaleIDs = 'footer_title' | 'footer_sendoff';
+type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
+```
+
+##### 内部字符串操作类型
+
+```typescript
+// Uppercase<StringType>
+type ASCIICacheKey<Str extends string> = `ID-${Uppercase<Str>}`;
+type MainID = ASCIICacheKey<'my_app'>;
+
+// Lowercase<StringType>
+type ASCIICacheKey<Str extends string> = `id-${Lowercase<Str>}`;
+type MainID = ASCIICacheKey<'MY_APP'>;
+
+// Capitalize<StringType>
+type LowercaseGreeting = 'hello, world';
+type Greeting = Capitalize<LowercaseGreeting>;
+
+// Uncapitalize<StringType>
+type UppercaseGreeting = 'HELLO WORLD';
+type UncomfortableGreeting = Uncapitalize<UppercaseGreeting>;
+```
+
 #### 联合类型
 
 ```typescript
@@ -670,52 +716,6 @@ evaluatePrice(myTruck);
 
 在以上代码中，我们使用 `switch` 和 `case` 运算符来实现类型守卫，从而确保在 `evaluatePrice` 方法中，我们可以安全地访问 `vehicle` 对象中的所包含的属性，来正确的计算该车辆类型所对应的价格。
 
-#### 字面量类型
-
-字符串字面量
-
-```typescript
-type Fruits = 'apple' | 'banana' | 'orange';
-```
-
-其他字面量类型
-
-```typescript
-// 其他字面量类型
-type OneToFive = 1 | 2 | 3 | 4 | 5;
-type Bools = true | false;
-```
-
-#### 模板文字类型
-
-模板文字类型建立在字符串文字类型之上，并且能够通过联合扩展成许多字符串。
-
-```typescript
-type EmailLocaleIDs = 'welcome_email' | 'email_heading';
-type FooterLocaleIDs = 'footer_title' | 'footer_sendoff';
-type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
-```
-
-##### 内部字符串操作类型
-
-```typescript
-// Uppercase<StringType>
-type ASCIICacheKey<Str extends string> = `ID-${Uppercase<Str>}`;
-type MainID = ASCIICacheKey<'my_app'>;
-
-// Lowercase<StringType>
-type ASCIICacheKey<Str extends string> = `id-${Lowercase<Str>}`;
-type MainID = ASCIICacheKey<'MY_APP'>;
-
-// Capitalize<StringType>
-type LowercaseGreeting = 'hello, world';
-type Greeting = Capitalize<LowercaseGreeting>;
-
-// Uncapitalize<StringType>
-type UppercaseGreeting = 'HELLO WORLD';
-type UncomfortableGreeting = Uncapitalize<UppercaseGreeting>;
-```
-
 #### 交叉类型
 
 ```typescript
@@ -733,7 +733,7 @@ type IStaff = IPerson & IWorker;
 
 #### 泛型
 
-#### 泛型接口
+##### 泛型接口
 
 ```typescript
 interface GenericIdentityFn<T> {
@@ -741,7 +741,7 @@ interface GenericIdentityFn<T> {
 }
 ```
 
-#### 泛型类
+##### 泛型类
 
 ```typescript
 class GenericNumber<T> {
@@ -756,8 +756,7 @@ myGenericNumber.add = function (x, y) {
 };
 ```
 
-#### 泛型工具类型
-
+#### 操作符
 ##### typeof
 
 在 TypeScript 中，`typeof` 操作符可以用来获取一个变量声明或对象的类型。
@@ -964,7 +963,7 @@ type MappedTypeWithNewProperties<Type> = {
 };
 ```
 
-可以利用一些特性，比如模板文字类型，从以前的属性中创建新的属性名:
+可以利用一些特性，比如模板字面量类型，从以前的属性中创建新的属性名:
 
 ```typescript
 type Getters<Type> = {
